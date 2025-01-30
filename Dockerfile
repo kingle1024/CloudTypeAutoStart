@@ -12,7 +12,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 5. 애플리케이션 코드 복사
-COPY app.py .
+COPY AutoStart.py .
 
 # 6. 컨테이너가 시작할 때 실행할 명령
-CMD ["python", "app.py"]
+CMD ["python", "AutoStart.py"]

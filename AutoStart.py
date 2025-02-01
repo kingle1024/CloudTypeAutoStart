@@ -65,12 +65,12 @@ try:
 
     # 두 번째 요소가 생길 때까지 최대 10초 대기
     try:
+        time.sleep(60)
         second_element = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable(
                 # (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[2]/div/div[2]/div[1]/a[1]'))
                 (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[1]/div/div[2]/div[1]/a[1]'))
         )
-        time.sleep(60)
         # 두 번째 요소 클릭
         driver.execute_script("arguments[0].click();", second_element)
         print("두 번째 요소 클릭 완료")

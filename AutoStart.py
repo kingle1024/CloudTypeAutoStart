@@ -13,6 +13,7 @@ chrome_options.add_argument("--headless")  # 헤드리스 모드
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("--window-size=1920,1080")  # 창 크기 설정
 
 # Chrome 드라이버 초기화
 driver = webdriver.Chrome(options=chrome_options)

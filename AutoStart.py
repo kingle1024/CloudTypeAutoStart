@@ -58,19 +58,20 @@ try:
         time.sleep(10)
         # 첫 번째 요소 클릭
         driver.execute_script("arguments[0].click();", first_element)
+        driver.refresh()
         print("첫 번째 요소 클릭 완료")
     except Exception as e:
         print(f"첫 번째 요소를 클릭하는데 오류가 발생했습니다: {e}")
 
     # 두 번째 요소가 생길 때까지 최대 10초 대기
     try:
-        time.sleep(60)
+        time.sleep(10)
         second_element = WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located(
                 (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[1]/div/div[2]/div[1]/a[1]'))
         )
         driver.execute_script("arguments[0].scrollIntoView(true);", second_element)  # 스크롤
-        time.sleep(30)
+        time.sleep(10)
         driver.execute_script("arguments[0].click();", second_element)
 
         print("두 번째 요소 클릭 완료")

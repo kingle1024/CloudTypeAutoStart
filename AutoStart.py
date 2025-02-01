@@ -70,6 +70,7 @@ try:
                 (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[2]/div/div[2]/div[1]/a[1]'))
         )
         driver.execute_script("arguments[0].scrollIntoView(true);", second_element)  # 스크롤
+        time.sleep(30)
         driver.execute_script("arguments[0].click();", second_element)
 
         print("두 번째 요소 클릭 완료")

@@ -57,7 +57,7 @@ try:
         )
         time.sleep(10)
         # 첫 번째 요소 클릭
-        first_element.click()
+        driver.execute_script("arguments[0].click();", first_element)
         print("첫 번째 요소 클릭 완료")
     except Exception as e:
         print(f"첫 번째 요소를 클릭하는데 오류가 발생했습니다: {e}")
@@ -70,7 +70,7 @@ try:
         )
         time.sleep(10)
         # 두 번째 요소 클릭
-        second_element.click()
+        driver.execute_script("arguments[0].click();", second_element)
         print("두 번째 요소 클릭 완료")
     except Exception as e:
         print(f"두 번째 요소를 클릭하는데 오류가 발생했습니다: {e}")

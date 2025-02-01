@@ -53,8 +53,7 @@ try:
     try:
         first_element = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable(
-                # (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[1]/div/div[2]/div[1]/a[1]'))
-                (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[2]/div/div[2]/div[1]/a[1]'))
+                (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[1]/div/div[2]/div[1]/a[1]'))
         )
         time.sleep(10)
         # 첫 번째 요소 클릭
@@ -67,12 +66,12 @@ try:
     try:
         time.sleep(60)
         second_element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable(
-                # (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[2]/div/div[2]/div[1]/a[1]'))
-                (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[1]/div/div[2]/div[1]/a[1]'))
+            EC.visibility_of_element_located(
+                (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[2]/div/div[2]/div[1]/a[1]'))
         )
-        # 두 번째 요소 클릭
+        driver.execute_script("arguments[0].scrollIntoView(true);", second_element)  # 스크롤
         driver.execute_script("arguments[0].click();", second_element)
+
         print("두 번째 요소 클릭 완료")
     except Exception as e:
         print(f"두 번째 요소를 클릭하는데 오류가 발생했습니다: {e}")

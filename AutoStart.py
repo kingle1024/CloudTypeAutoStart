@@ -53,7 +53,7 @@ try:
     try:
         first_element = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable(
-                (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[1]/div/div[2]/div[1]/a[1]'))
+                (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[2]/div/div[2]/div[1]/a[1]'))
         )
         time.sleep(10)
         # 첫 번째 요소 클릭
@@ -67,7 +67,7 @@ try:
         time.sleep(60)
         second_element = WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located(
-                (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[2]/div/div[2]/div[1]/a[1]'))
+                (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[1]/div/div[2]/div[1]/a[1]'))
         )
         driver.execute_script("arguments[0].scrollIntoView(true);", second_element)  # 스크롤
         time.sleep(30)

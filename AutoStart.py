@@ -1,5 +1,6 @@
+import os
+
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -26,7 +27,7 @@ try:
             EC.presence_of_element_located((By.XPATH, '//*[@id="page"]/div/div[1]/div/div[2]/div/div[2]/form/div[1]/input'))
         )
         print("키입력 시작")
-        email_field.send_keys("id@naver.com")
+        email_field.send_keys(os.getenv('EMAIL'))  # 환경 변수에서 이메일 가져오기
         print("키입력 완료")
     except Exception as e:
         print(f"아이디 입력 필드를 찾지 못했습니다: {e}")
@@ -36,7 +37,7 @@ try:
             EC.visibility_of_element_located((By.XPATH, '//*[@id="page"]/div/div[1]/div/div[2]/div/div[2]/form/div[2]/input'))
         )
         password_field.clear()  # 기존 내용 지우기 (필요한 경우)
-        password_field.send_keys("pw")
+        password_field.send_keys(os.getenv('PASSWORD'))  # 환경 변수에서 비밀번호 가져오기
         print("비밀번호 입력 완료")
 
         # 엔터 키 입력

@@ -55,7 +55,7 @@ try:
             EC.element_to_be_clickable(
                 (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[1]/div/div[2]/div[1]/a[1]'))
         )
-        time.sleep(5)
+        time.sleep(10)
         # 첫 번째 요소 클릭
         first_element.click()
         print("첫 번째 요소 클릭 완료")
@@ -68,7 +68,7 @@ try:
             EC.element_to_be_clickable(
                 (By.XPATH, '//*[@id="page"]/div/div[4]/div/div[1]/div/div/div/div[2]/div/div[2]/div[1]/a[1]'))
         )
-        time.sleep(5)
+        time.sleep(10)
         # 두 번째 요소 클릭
         second_element.click()
         print("두 번째 요소 클릭 완료")

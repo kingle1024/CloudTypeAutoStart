@@ -3,7 +3,7 @@ name: Run Python script
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 * * * *' # 매 정각에 실행
 
 jobs:
   run:

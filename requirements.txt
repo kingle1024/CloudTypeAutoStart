@@ -1,1 +1,2 @@
 selenium==4.10.0  # 사용 중인 Selenium 버전 (필요에 따라 변경)
+requests==2.28.1  # requests 라이브러리 버전 (필요에 따라 변경)

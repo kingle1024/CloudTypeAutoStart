@@ -3,7 +3,7 @@ name: Run Python script
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 * * * *' # 매 정각에 실행
+    - cron: '0 1-9/2 * * *' # 매일 오전 1시부터 9시까지 2시간 간격으로 실행
 
 jobs:
   run:
@@ -26,4 +26,4 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}  # GitHub Secrets에서 이메일 가져오기
           PASSWORD: ${{ secrets.PASSWORD }}  # GitHub Secrets에서 비밀번호 가져오기
-        run: python AutoStart.py  # Python 스크립트 실행
+        run: python ApiCallStart.py  # Python 스크립트 실행

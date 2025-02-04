@@ -6,7 +6,7 @@ def get_token():
     # POST 요청을 보낼 URL
     url = "https://api.cloudtype.io/auth"
 
-    if os.getenv('ENV') != 'local':
+    if os.getenv('ENV') == 'local':
         # 로컬 환경 변수 직접 설정
         EMAIL = 'email@naver.com'  # 로컬 이메일
         PASSWORD = 'password'  # 로컬 비밀번호

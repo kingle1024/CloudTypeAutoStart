@@ -73,6 +73,9 @@ def check_status(token):
                 elif name == "travel-service" and active == 0:
                     print("Active for travel-service is 0, proceeding to start deployment.")
                     start_deployment(token, "travel-service")
+                elif name == "nklcbdty-service" and active == 0:
+                    print("Active for nklcbdty-service is 0, proceeding to start deployment.")
+                    start_deployment(token, "nklcbdty-service")
             return True
         except json.JSONDecodeError:
             print("Failed to parse JSON response.")

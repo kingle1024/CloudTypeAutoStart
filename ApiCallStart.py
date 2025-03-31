@@ -69,7 +69,7 @@ def check_status(token):
 
                 if name == "mariadb" and active == 0:
                     print("Active for mariadb is 0, proceeding to start deployment.")
-                    start_deployment(token, "teran1024" "mariadb")
+                    start_deployment(token, "teran1024", "mariadb")
                 elif name == "travel-service" and active == 0:
                     print("Active for travel-service is 0, proceeding to start deployment.")
                     start_deployment(token, "teran1024", "travel-service")

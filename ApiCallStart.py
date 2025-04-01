@@ -69,13 +69,13 @@ def check_status(token):
 
                 if name == "mariadb" and active == 0:
                     print("Active for mariadb is 0, proceeding to start deployment.")
-                    start_deployment(token, "teran1024", "mariadb")
+                    start_deployment(token, "teran1024/db", "mariadb")
                 elif name == "travel-service" and active == 0:
                     print("Active for travel-service is 0, proceeding to start deployment.")
-                    start_deployment(token, "teran1024", "travel-service")
+                    start_deployment(token, "teran1024/db", "travel-service")
                 elif name == "nklcbdty-service" and active == 0:
                     print("Active for nklcbdty-service is 0, proceeding to start deployment.")
-                    start_deployment(token, "backend1024", "nklcbdty-service")
+                    start_deployment(token, "backend1024/server", "nklcbdty-service")
             return True
         except json.JSONDecodeError:
             print("Failed to parse JSON response.")
@@ -86,7 +86,7 @@ def check_status(token):
 
 def start_deployment(token, user, service_name):
     # PUT 요청을 보낼 URL
-    url = f"https://api.cloudtype.io/project/{user}/db/stage/main/deployment/{service_name}/start"
+    url = f"https://api.cloudtype.io/project/{user}/stage/main/deployment/{service_name}/start"
 
     # 요청 헤더에 Authorization 추가
     headers = {

@@ -45,9 +45,8 @@ def get_token():
 
     return None  # token이 없는 경우 None 반환
 
-def check_status(token):
+def check_status(url, token):
     # GET 요청을 보낼 URL
-    url = "https://api.cloudtype.io/project/teran1024/db/stage/main/stat"
 
     # 요청 헤더에 Authorization 추가
     headers = {
@@ -105,4 +104,5 @@ def start_deployment(token, user, service_name):
 if __name__ == "__main__":
     token = get_token()  # token 가져오기
     if token:
-        check_status(token)  # status 확인
+        check_status("https://api.cloudtype.io/project/teran1024/db/stage/main/stat", token)  # status 확인
+        check_status("https://api.cloudtype.io/project/backend1024/server/stage/main/stat", token)  # status 확인

@@ -75,9 +75,9 @@ def check_status(url, token):
                 elif name == "nklcbdty-service" and active == 0:
                     print("Active for nklcbdty-service is 0, proceeding to start deployment.")
                     start_deployment(token, "backend1024/server", "nklcbdty-service")
-                # elif name == "nklcbdty-batch" and active == 0:
-                #     print("Active for nklcbdty-batch is 0, proceeding to start deployment.")
-                #     start_deployment(token, "backend1024/server", "nklcbdty-batch")
+                elif name == "nklcbdty-batch" and active == 0:
+                    print("Active for nklcbdty-batch is 0, proceeding to start deployment.")
+                    start_deployment(token, "backend1024/server", "nklcbdty-batch")
             return True
         except json.JSONDecodeError:
             print("Failed to parse JSON response.")

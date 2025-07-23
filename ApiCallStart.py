@@ -78,6 +78,9 @@ def check_status(url, token):
                 elif name == "nklcbdty-batch" and active == 0:
                     print("Active for nklcbdty-batch is 0, proceeding to start deployment.")
                     start_deployment(token, "backend1024/server", "nklcbdty-batch")
+                elif name == "redis" and active == 0:
+                    print("Active for redis is 0, proceeding to start deployment.")
+                    start_deployment(token, "kingle1024/devops", "redis")
             return True
         except json.JSONDecodeError:
             print("Failed to parse JSON response.")

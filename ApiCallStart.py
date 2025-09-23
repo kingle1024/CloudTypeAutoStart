@@ -115,3 +115,4 @@ if __name__ == "__main__":
     if token:
         check_status("https://api.cloudtype.io/project/teran1024/db/stage/main/stat", token)  # status 확인
         check_status("https://api.cloudtype.io/project/backend1024/server/stage/main/stat", token)  # status 확인
+        check_status("https://api.cloudtype.io/project/kingle1024/devops/stage/main/stat", token)  # status 확인

@@ -81,6 +81,9 @@ def check_status(url, token):
                 elif name == "redis" and active == 0:
                     print("Active for redis is 0, proceeding to start deployment.")
                     start_deployment(token, "kingle1024/devops", "redis")
+                elif name == "connect-service" and active == 0:
+                    print("Active for connect-service is 0, proceeding to start deployment.")
+                    start_deployment(token, "kingle1024/devops", "connect-service")
             return True
         except json.JSONDecodeError:
             print("Failed to parse JSON response.")

@@ -69,9 +69,9 @@ def check_status(url, token):
                 if name == "mariadb" and active == 0:
                     print("Active for mariadb is 0, proceeding to start deployment.")
                     start_deployment(token, "teran1024/db", "mariadb")
-                elif name == "agent-console-config-server" and active == 0:
-                    print("Active for agent-console-config-server is 0, proceeding to start deployment.")
-                    start_deployment(token, "teran1024/db", "agent-console-config-server")
+                elif name == "agent-agent-console-electron" and active == 0:
+                    print("Active for agent-agent-console-electron is 0, proceeding to start deployment.")
+                    start_deployment(token, "teran1024/db", "agent-agent-console-electron")
                 elif name == "nklcbdty-service" and active == 0:
                     print("Active for nklcbdty-service is 0, proceeding to start deployment.")
                     start_deployment(token, "backend1024/server", "nklcbdty-service")
